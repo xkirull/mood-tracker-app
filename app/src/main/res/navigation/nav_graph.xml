@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/moodFragment">
+
+    <!-- Экран выбора настроения -->
+    <fragment
+        android:id="@+id/moodFragment"
+        android:name="com.example.moodtrackerapp.MoodFragment"
+        android:label="Mood Selection"
+        tools:layout="@layout/fragment_mood">
+        <!-- Действие перехода на статистику -->
+        <action
+            android:id="@+id/action_moodFragment_to_statisticsFragment"
+            app:destination="@id/statisticsFragment" />
+    </fragment>
+
+    <!-- Экран статистики -->
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.example.moodtrackerapp.StatisticsFragment"
+        android:label="Statistics"
+        tools:layout="@layout/fragment_statistics" />
+</navigation>
